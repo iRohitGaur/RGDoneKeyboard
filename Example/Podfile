@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'RGDoneKeyboard_Example' do
+  pod 'RGDoneKeyboard', :path => '../'
+
+  target 'RGDoneKeyboard_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
