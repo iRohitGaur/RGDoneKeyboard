@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'RGDoneKeyboard'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of RGDoneKeyboard.'
+  s.summary          = 'This project will add a done button on your TextField and TextView.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+'This project will add a done button on your TextField and TextView. Just import and turn on the accessory.'
                        DESC
 
   s.homepage         = 'https://github.com/iRohitGaur/RGDoneKeyboard'
@@ -26,11 +26,17 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'iRohitGaur' => 'rohitgaur7@gmail.com' }
   s.source           = { :git => 'https://github.com/iRohitGaur/RGDoneKeyboard.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://twitter.com/iRohitGaur'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '13.0'
 
-  s.source_files = 'RGDoneKeyboard/Classes/**/*'
+  s.source_files = 'Classes/**/*.swift'
+  
+  s.swift_version = '5.0'
+  
+  s.platforms = {
+      "ios": "13.0"
+  }
   
   # s.resource_bundles = {
   #   'RGDoneKeyboard' => ['RGDoneKeyboard/Assets/*.png']
