@@ -22,7 +22,7 @@ pod 'RGDoneKeyboard'
 
 ## Author
 
-iRohitGaur, knotjinx@gmail.com
+iRohitGaur, rohitgaur7@gmail.com
 
 ## License
 

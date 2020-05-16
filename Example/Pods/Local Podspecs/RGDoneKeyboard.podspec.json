@@ -1,0 +1,22 @@
+{
+  "name": "RGDoneKeyboard",
+  "version": "0.1.0",
+  "summary": "A short description of RGDoneKeyboard.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/iRohitGaur/RGDoneKeyboard",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "iRohitGaur": "knotjinx@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/iRohitGaur/RGDoneKeyboard.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "RGDoneKeyboard/Classes/**/*"
+}
