@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import RGDoneKeyboard
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.RGDoneKeyboard(dismissOnTap: true)
     }
 
     override func didReceiveMemoryWarning() {
