@@ -9,7 +9,7 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
+<img src="images/rgdk.gif" height="400">
 
 ## Installation
 
@@ -19,6 +19,24 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'RGDoneKeyboard'
 ```
+
+## Usage
+
+Turn on the accessory in storyboard. For details, check these videos:
+
+<a href="https://www.youtube.com/playlist?list=PLSyUY9cUrmozWHqIRZ1UULgcdl2SAJCY2"><img src="images/rgdk-yt.png" height="200"></a>
+
+Import it in the ViewController you want it to work:
+
+```ruby
+import RGDoneKeyboard
+```
+In your viewDidLoad function, call RGDoneKeyboard on self:
+
+```ruby
+self.RGDoneKeyboard(dismissOnTap: true)
+```
+If you want to dismiss the keyboard when you tap on the view, you can set dismissOnTap as true.
 
 ## Author
 

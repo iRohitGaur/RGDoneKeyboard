@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-'This project will add a done button on your TextField and TextView. Just import and turn on the accessory.'
+'This project will add a done button on your TextField and TextView. Just turn on the accessory, import the library and call RGDoneKeyboard.'
                        DESC
 
   s.homepage         = 'https://github.com/iRohitGaur/RGDoneKeyboard'
