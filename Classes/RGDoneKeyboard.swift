@@ -96,9 +96,13 @@ extension UIViewController {
 
     @objc func keyboardWillChange(notification: Notification) {
         var location: CGFloat = 0
+        var tfvHeight: CGFloat = 0
         
         // Get current firstResponder and check if it is a TextField
         if let activeTextField = UIResponder.currentFirstResponder as? UITextField {
+            
+            // Get the height of the Text Field
+            tfvHeight = activeTextField.frame.size.height
             
             // Check if we can get its origin w.r.t. screen
             if let globalPoint = activeTextField.superview?.convert(activeTextField.frame.origin, to: nil) {
@@ -110,6 +114,9 @@ extension UIViewController {
             
             // Get current firstResponder and check if it is a TextView
             if let activeTextView = UIResponder.currentFirstResponder as? UITextView {
+                
+                // Get the height of the Text View
+                tfvHeight = activeTextView.frame.size.height
                 
                 // Check if we can get its origin w.r.t. screen
                 if let globalPoint = activeTextView.superview?.convert(activeTextView.frame.origin, to: nil) {
@@ -125,11 +132,14 @@ extension UIViewController {
         
         if notification.name == UIResponder.keyboardWillChangeFrameNotification || notification.name == UIResponder.keyboardWillShowNotification {
             
-            // Check if location is > half of screen height
-            if(location > (self.view.frame.height / 2) ) {
+            // Check if location is > (ViewHeight - KeyboardHeight - TextFieldOrViewHeight - Margin8)
+            if(location > (self.view.frame.height - keyboardSize.height - tfvHeight - 8) ) {
                 
-                // Pull the screen frame up by the value of keyboard height
-                view.frame.origin.y = -keyboardSize.height
+                // Pull the screen up by location + TextFieldOrViewHeight + Margin8 - (ViewHeight - KeyboardHeight)
+                let pullUp = location + tfvHeight + 8 - (self.view.frame.height - keyboardSize.height)
+                
+                // Pull the screen frame up by the calculated value
+                view.frame.origin.y = -pullUp
             }
         } else {
             

@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RGDoneKeyboard'
-  s.version          = '1.0.0'
-  s.summary          = 'This project will add a done button on your TextField and TextView.'
+  s.version          = '1.1.0'
+  s.summary          = 'This project will add a done button on your TextField and TextView and move the UIView upwards if needed.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-'This project will add a done button on your TextField and TextView. Just turn on the accessory, import the library and call RGDoneKeyboard.'
+'This project will add a done button on your TextField and TextView. Just turn on the accessory from storyboard for the TextField or TextView you want it to work. This project will also move the view upwards if the textfield is at a location that could hide behind the keyboard, just import the library and call RGDoneKeyboard on self in ViewDidLoad of the ViewController you want it to work.'
                        DESC
 
   s.homepage         = 'https://github.com/iRohitGaur/RGDoneKeyboard'
